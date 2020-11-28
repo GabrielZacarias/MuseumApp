@@ -2,9 +2,12 @@ package com.museumtickets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -32,5 +35,30 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
         listView.setAdapter(arrayAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(position == 0){
+                    Intent metroMuseum = new Intent(view.getContext(), MuseumView1.class);
+                    startActivityForResult(metroMuseum, 0);
+                }
+                else if(position == 1) {
+                    Intent modernMuseum = new Intent(view.getContext(), MuseumView2.class);
+                    startActivityForResult(modernMuseum, 1);
+                }
+                else if(position == 2) {
+                    Intent americanMuseum = new Intent(view.getContext(), MuseumView3.class);
+                    startActivityForResult(americanMuseum, 2);
+                }
+                else if(position == 3) {
+                    Intent solomonMuseum = new Intent(view.getContext(), MuseumView4.class);
+                    startActivityForResult(solomonMuseum, 3);
+                }
+            }
+        });
+
+
     }
 }
