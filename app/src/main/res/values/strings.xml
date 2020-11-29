@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Museum Tickets</string>
     <string name="top_nyc_museums_to_visit">Top NYC Museums to visit</string>
+    <string name="string_my_activity_label">string/my_activity_label</string>
+    <string name="museum_selected_is">Museum selected is...</string>
+    <string name="todo">TODO</string>
 </resources>
