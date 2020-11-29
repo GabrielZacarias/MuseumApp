@@ -39,23 +39,20 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent secActivity = new Intent(view.getContext(), MuseumActivity.class);
 
-                if(position == 0){
-                    Intent metroMuseum = new Intent(view.getContext(), MuseumView1.class);
-                    startActivityForResult(metroMuseum, 0);
-                }
-                else if(position == 1) {
-                    Intent modernMuseum = new Intent(view.getContext(), MuseumView2.class);
-                    startActivityForResult(modernMuseum, 1);
-                }
-                else if(position == 2) {
-                    Intent americanMuseum = new Intent(view.getContext(), MuseumView3.class);
-                    startActivityForResult(americanMuseum, 2);
-                }
-                else if(position == 3) {
-                    Intent solomonMuseum = new Intent(view.getContext(), MuseumView4.class);
-                    startActivityForResult(solomonMuseum, 3);
-                }
+                if(position == 0)
+                    startActivityForResult(secActivity, 0);
+
+                else if(position == 1)
+                    startActivityForResult(secActivity, 1);
+
+                else if(position == 2)
+                    startActivityForResult(secActivity, 2);
+
+                else if(position == 3)
+                    startActivityForResult(secActivity, 3);
+
             }
         });
 

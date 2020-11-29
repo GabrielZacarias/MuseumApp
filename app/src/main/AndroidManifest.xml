@@ -9,10 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MuseumTickets">
-        <activity android:name=".MuseumView4"></activity>
-        <activity android:name=".MuseumView3" />
-        <activity android:name=".MuseumView2" />
-        <activity android:name=".MuseumView1" />
+
+        <activity android:name=".MuseumActivity">
+            android:name="com.example.myapp.MyCurrentActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.museumtickets.MainActivity >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.museumtickets.MainActivity" />
+
+        </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
