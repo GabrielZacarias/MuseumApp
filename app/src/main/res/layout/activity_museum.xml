@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="@string/museum_selected_is"
         android:textColor="#009688"
-        android:textSize="26sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,10 +25,11 @@
         android:id="@+id/imageView"
         android:layout_width="202dp"
         android:layout_height="208dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/metropolitan"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/metropolitan" />
 </androidx.constraintlayout.widget.ConstraintLayout>

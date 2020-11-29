@@ -38,20 +38,25 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+            {
                 Intent secActivity = new Intent(view.getContext(), MuseumActivity.class);
 
                 if(position == 0)
-                    startActivityForResult(secActivity, 0);
+                    secActivity.putExtra("Position", 0);
+
 
                 else if(position == 1)
-                    startActivityForResult(secActivity, 1);
+                    secActivity.putExtra("Position", 1);
 
                 else if(position == 2)
-                    startActivityForResult(secActivity, 2);
+                    secActivity.putExtra("Position", 2);
+
 
                 else if(position == 3)
-                    startActivityForResult(secActivity, 3);
+                    secActivity.putExtra("Position", 3);
+
+                startActivity(secActivity);
 
             }
         });
