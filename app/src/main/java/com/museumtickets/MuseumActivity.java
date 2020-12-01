@@ -33,6 +33,7 @@ public class MuseumActivity extends AppCompatActivity {
             case 0:
                 title.setText("The Metropolitan Museum of Art");
                 picture.setImageResource(R.drawable.metropolitan);
+
                 break;
             case 1:
                 title.setText("The Museum of Modern Art");

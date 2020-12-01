@@ -4,4 +4,5 @@
     <string name="string_my_activity_label">string/my_activity_label</string>
     <string name="museum_selected_is">Museum selected is...</string>
     <string name="todo">TODO</string>
+    <string name="button">Button</string>
 </resources>
