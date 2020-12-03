@@ -6,6 +6,9 @@
     <string name="todo">TODO</string>
     <string name="button">Calculate Ticket Price</string>
     <string name="set_price" />
+    <string name="ticket_price">ticket price</string>
+    <string name="sales_tax">sales tax</string>
+    <string name="ticket_total">ticket total</string>
     <string-array name="numbers">
         <item>0</item>
         <item>1</item>
