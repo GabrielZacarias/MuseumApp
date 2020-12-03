@@ -134,25 +134,44 @@ public class MuseumActivity extends AppCompatActivity {
         int adultPrice = Integer.parseInt(adultSpinner.getSelectedItem().toString());
         int seniorPrice = Integer.parseInt(seniorSpinner.getSelectedItem().toString());
         int studentPrice = Integer.parseInt(studentSpinner.getSelectedItem().toString());
-        int totalTicketPrice = ((adultPrice * MagicNumbers.MOMA_ADULT) + (seniorPrice * MagicNumbers.MOMA_SENIOR) + (studentPrice * MagicNumbers.MOMA_STUDENT));
-        double totalSalesTax = (totalTicketPrice * MagicNumbers.MOMA_TAX);
-        double ticketTotal = (totalTicketPrice * MagicNumbers.MOMA_TOTAL);
+
+        double totalTicketPriceMMA = ((adultPrice * MagicNumbers.MMA_ADULT) + (seniorPrice * MagicNumbers.MMA_SENIOR) + (studentPrice * MagicNumbers.MMA_STUDENT));
+        double totalSalesTaxMMA = (totalTicketPriceMMA * MagicNumbers.NYC_TAX);
+        double ticketTotalMMA = (totalTicketPriceMMA * MagicNumbers.NYC_TOTAL);
+
+        double totalTicketPriceMOMA = ((adultPrice * MagicNumbers.MOMA_ADULT) + (seniorPrice * MagicNumbers.MOMA_SENIOR) + (studentPrice * MagicNumbers.MOMA_STUDENT));
+        double totalSalesTaxMOMA = (totalTicketPriceMMA * MagicNumbers.NYC_TAX);
+        double ticketTotalMOMA = (totalTicketPriceMMA * MagicNumbers.NYC_TOTAL);
+
+        double totalTicketPriceAMN = ((adultPrice * MagicNumbers.AMN_ADULT) + (seniorPrice * MagicNumbers.AMN_SENIOR) + (studentPrice * MagicNumbers.AMN_STUDENT));
+        double totalSalesTaxAMN = (totalTicketPriceMMA * MagicNumbers.NYC_TAX);
+        double ticketTotalAMN = (totalTicketPriceMMA * MagicNumbers.NYC_TOTAL);
+
+        double totalTicketPriceSGM = ((adultPrice * MagicNumbers.SGM_ADULT) + (seniorPrice * MagicNumbers.SGM_SENIOR) + (studentPrice * MagicNumbers.SGM_STUDENT));
+        double totalSalesTaxSGM = (totalTicketPriceMMA * MagicNumbers.NYC_TAX);
+        double ticketTotalSGM = (totalTicketPriceMMA * MagicNumbers.NYC_TOTAL);
 
 
         switch(pos){
             case 0:
-                ticketPrice.setText((String.valueOf(totalTicketPrice)));
-                salesTax.setText((String.valueOf(totalSalesTax)));
-                totalPrice.setText((String.valueOf(ticketTotal)));
+                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceMMA)));
+                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxMMA)));
+                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalMMA)));
                 break;
             case 1:
-
+                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceMOMA)));
+                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxMOMA)));
+                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalMOMA)));
                 break;
             case 2:
-
+                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceAMN)));
+                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxAMN)));
+                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalAMN)));
                 break;
             case 3:
-
+                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceSGM)));
+                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxSGM)));
+                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalSGM)));
                 break;
             default:
                 break;
