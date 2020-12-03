@@ -135,9 +135,10 @@ public class MuseumActivity extends AppCompatActivity {
         int adultPrice = Integer.parseInt(adultSpinner.getSelectedItem().toString());
         int seniorPrice = Integer.parseInt(seniorSpinner.getSelectedItem().toString());
         int studentPrice = Integer.parseInt(studentSpinner.getSelectedItem().toString());
+
         double museumPrice = 0;
-        double totalMuseumTax = 0;
-        double totalMuseumPrice = 0;
+        double totalMuseumTax;
+        double totalMuseumPrice;
 
         switch(pos){
             case 0:
@@ -167,7 +168,7 @@ public class MuseumActivity extends AppCompatActivity {
 
     private void callToast(){
         Context context = getApplicationContext();
-        CharSequence text = "Max 5 tickets per person!";
+        CharSequence text = "Max 5 tickets per category!";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
