@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,4 +54,10 @@ public class MuseumActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void open(View view) {
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/"));
+        startActivity(browserIntent);
+    }
+
 }
