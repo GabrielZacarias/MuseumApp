@@ -41,13 +41,16 @@ public class MuseumActivity extends AppCompatActivity {
         seniorSpinner.setAdapter(adapter);
         studentSpinner.setAdapter(adapter);
 
-        final EditText adultInput = findViewById(R.id.editTextNumber);
-        final EditText seniorInput = findViewById(R.id.editTextNumber2);
-        final EditText studentInput = findViewById(R.id.editTextNumber3);
+        final EditText ticketPrice = findViewById(R.id.editTextNumber);
+        final EditText salesTax = findViewById(R.id.editTextNumber2);
+        final EditText totalPrice = findViewById(R.id.editTextNumber3);
 
-        adultInput.setKeyListener(null);
-        seniorInput.setKeyListener(null);
-        studentInput.setKeyListener(null);
+        ticketPrice.setKeyListener(null);
+        salesTax.setKeyListener(null);
+        totalPrice.setKeyListener(null);
+
+        String val1 = adultSpinner.getSelectedItem().toString();
+        ticketPrice.setText(val1);
 
     }
 
