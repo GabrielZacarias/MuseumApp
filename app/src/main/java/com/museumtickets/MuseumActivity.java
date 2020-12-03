@@ -123,5 +123,4 @@ public class MuseumActivity extends AppCompatActivity {
 
         startActivity(browserIntent);
     }
-
 }
