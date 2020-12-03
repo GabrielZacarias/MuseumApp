@@ -49,9 +49,6 @@ public class MuseumActivity extends AppCompatActivity {
         salesTax.setKeyListener(null);
         totalPrice.setKeyListener(null);
 
-        String val1 = adultSpinner.getSelectedItem().toString();
-        ticketPrice.setText(val1);
-
     }
 
     int pos;
@@ -123,4 +120,19 @@ public class MuseumActivity extends AppCompatActivity {
 
         startActivity(browserIntent);
     }
+
+    public void onClick(View view) {
+
+        Spinner adultSpinner = findViewById(R.id.spinner1);
+        Spinner seniorSpinner = findViewById(R.id.spinner2);
+        //Spinner studentSpinner = findViewById(R.id.spinner3);
+
+        final EditText adultInput = findViewById(R.id.editTextNumber);
+
+        int adultPrice = Integer.parseInt(adultSpinner.getSelectedItem().toString());
+        int seniorPrice = Integer.parseInt(seniorSpinner.getSelectedItem().toString());
+        int sum = adultPrice + seniorPrice;
+        adultInput.setText((String.valueOf(sum)));
+    }
+
 }
