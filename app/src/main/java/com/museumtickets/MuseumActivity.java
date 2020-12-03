@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MuseumActivity extends AppCompatActivity {
@@ -23,6 +27,12 @@ public class MuseumActivity extends AppCompatActivity {
         int value = getIntent().getIntExtra("Position", 0);
 
         switchMuseum(value);
+
+        //Instance needed for spinner values
+        Spinner spinner = findViewById(R.id.spinner1);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.numbers, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 
     private void switchMuseum(int position) {
@@ -52,4 +62,10 @@ public class MuseumActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void open(View view) {
+        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/"));
+        startActivity(browserIntent);
+    }
+
 }
