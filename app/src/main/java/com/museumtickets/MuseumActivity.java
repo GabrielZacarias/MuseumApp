@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -39,6 +40,15 @@ public class MuseumActivity extends AppCompatActivity {
         adultSpinner.setAdapter(adapter);
         seniorSpinner.setAdapter(adapter);
         studentSpinner.setAdapter(adapter);
+
+        final EditText adultInput = findViewById(R.id.editTextNumber);
+        final EditText seniorInput = findViewById(R.id.editTextNumber2);
+        final EditText studentInput = findViewById(R.id.editTextNumber3);
+
+        adultInput.setKeyListener(null);
+        seniorInput.setKeyListener(null);
+        studentInput.setKeyListener(null);
+
     }
 
     int pos;
