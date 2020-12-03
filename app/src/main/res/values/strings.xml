@@ -5,6 +5,9 @@
     <string name="museum_selected_is">Museum selected is</string>
     <string name="todo">TODO</string>
     <string name="button">Calculate Ticket Price</string>
+    <string name="adult_25">adult $25</string>
+    <string name="senior_17">senior $17</string>
+    <string name="student_12">student $12</string>
     <string-array name="numbers">
         <item>0</item>
         <item>1</item>
