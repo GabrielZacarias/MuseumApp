@@ -38,11 +38,11 @@ public class MuseumActivity extends AppCompatActivity {
     int pos;
 
     private void switchMuseum(int position) {
-        final TextView title = (TextView) findViewById(R.id.ticketTitle);
-        final ImageView picture = (ImageView) findViewById(R.id.imageView);
-        final TextView adultText = (TextView) findViewById(R.id.adult);
-        final TextView seniorText = (TextView) findViewById(R.id.senior);
-        final TextView studentText = (TextView) findViewById(R.id.student);
+        final TextView title = findViewById(R.id.ticketTitle);
+        final ImageView picture = findViewById(R.id.imageView);
+        final TextView adultText = findViewById(R.id.adult);
+        final TextView seniorText = findViewById(R.id.senior);
+        final TextView studentText = findViewById(R.id.student);
 
 
         pos = position;
@@ -83,14 +83,26 @@ public class MuseumActivity extends AppCompatActivity {
     }
 
     public void open(View view) {
-        Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/"));
-        startActivity(browserIntent);
-    }
+        Intent browserIntent = null;
 
-    public void onClick(View v){
-        if(pos == 0){
-
+        switch(pos){
+            case 0:
+                browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/"));
+                break;
+            case 1:
+                browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.moma.org/"));
+                break;
+            case 2:
+                browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amnh.org/"));
+                break;
+            case 3:
+                browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.guggenheim.org/"));
+                break;
+            default:
+                break;
         }
+
+        startActivity(browserIntent);
     }
 
 }
