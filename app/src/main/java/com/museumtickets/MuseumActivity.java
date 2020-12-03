@@ -125,14 +125,39 @@ public class MuseumActivity extends AppCompatActivity {
 
         Spinner adultSpinner = findViewById(R.id.spinner1);
         Spinner seniorSpinner = findViewById(R.id.spinner2);
-        //Spinner studentSpinner = findViewById(R.id.spinner3);
+        Spinner studentSpinner = findViewById(R.id.spinner3);
 
-        final EditText adultInput = findViewById(R.id.editTextNumber);
+        final EditText ticketPrice = findViewById(R.id.editTextNumber);
+        final EditText salesTax = findViewById(R.id.editTextNumber2);
+        final EditText totalPrice = findViewById(R.id.editTextNumber3);
 
         int adultPrice = Integer.parseInt(adultSpinner.getSelectedItem().toString());
         int seniorPrice = Integer.parseInt(seniorSpinner.getSelectedItem().toString());
-        int sum = adultPrice + seniorPrice;
-        adultInput.setText((String.valueOf(sum)));
+        int studentPrice = Integer.parseInt(studentSpinner.getSelectedItem().toString());
+        int totalTicketPrice = ((adultPrice * MagicNumbers.MOMA_ADULT) + (seniorPrice * MagicNumbers.MOMA_SENIOR) + (studentPrice * MagicNumbers.MOMA_STUDENT));
+        double totalSalesTax = (totalTicketPrice * MagicNumbers.MOMA_TAX);
+        double ticketTotal = (totalTicketPrice * MagicNumbers.MOMA_TOTAL);
+
+
+        switch(pos){
+            case 0:
+                ticketPrice.setText((String.valueOf(totalTicketPrice)));
+                salesTax.setText((String.valueOf(totalSalesTax)));
+                totalPrice.setText((String.valueOf(ticketTotal)));
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            default:
+                break;
+        }
+
     }
 
 }
