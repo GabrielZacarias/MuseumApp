@@ -40,6 +40,10 @@ public class MuseumActivity extends AppCompatActivity {
     private void switchMuseum(int position) {
         final TextView title = (TextView) findViewById(R.id.ticketTitle);
         final ImageView picture = (ImageView) findViewById(R.id.imageView);
+        final TextView adultText = (TextView) findViewById(R.id.adult);
+        final TextView seniorText = (TextView) findViewById(R.id.senior);
+        final TextView studentText = (TextView) findViewById(R.id.student);
+
 
         pos = position;
 
@@ -47,19 +51,30 @@ public class MuseumActivity extends AppCompatActivity {
             case 0:
                 title.setText("The Metropolitan Museum of Art");
                 picture.setImageResource(R.drawable.metropolitan);
-
+                adultText.setText("adult $25");
+                seniorText.setText("senior $17");
+                studentText.setText("student $12");
                 break;
             case 1:
                 title.setText("The Museum of Modern Art");
                 picture.setImageResource(R.drawable.modern_art);
+                adultText.setText("adult $25");
+                seniorText.setText("senior $18");
+                studentText.setText("student $14");
                 break;
             case 2:
                 title.setText("American Museum of Natural History");
                 picture.setImageResource(R.drawable.american);
+                adultText.setText("adult $23");
+                seniorText.setText("senior $18");
+                studentText.setText("student $18");
                 break;
             case 3:
                 title.setText("Solomon R. Guggenheim Museum");
                 picture.setImageResource(R.drawable.solomon);
+                adultText.setText("adult $25");
+                seniorText.setText("senior $18");
+                studentText.setText("student $18");
                 break;
             default:
                 title.setText("Incoming...");

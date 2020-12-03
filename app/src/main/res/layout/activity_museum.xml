@@ -35,10 +35,10 @@
         app:srcCompat="@drawable/metropolitan" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/adult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/adult_25"
+        android:text="@string/set_price"
         android:textColor="#00f"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -50,10 +50,10 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/senior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/senior_17"
+        android:text="@string/set_price"
         android:textColor="#00f"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -65,10 +65,10 @@
         app:layout_constraintVertical_bias="0.589" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/student_12"
+        android:text="@string/set_price"
         android:textColor="#00f"
         android:textSize="20sp"
         android:textStyle="bold"
