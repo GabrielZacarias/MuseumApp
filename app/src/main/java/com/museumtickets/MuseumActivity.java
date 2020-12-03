@@ -29,10 +29,16 @@ public class MuseumActivity extends AppCompatActivity {
         switchMuseum(value);
 
         //Instance needed for spinner values
-        Spinner spinner = findViewById(R.id.spinner1);
+        Spinner adultSpinner = findViewById(R.id.spinner1);
+        Spinner seniorSpinner = findViewById(R.id.spinner2);
+        Spinner studentSpinner = findViewById(R.id.spinner3);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.numbers, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+
+        adultSpinner.setAdapter(adapter);
+        seniorSpinner.setAdapter(adapter);
+        studentSpinner.setAdapter(adapter);
     }
 
     int pos;
