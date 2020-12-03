@@ -28,15 +28,9 @@ public class MuseumActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         int value = getIntent().getIntExtra("Position", 0);
-
         switchMuseum(value);
 
-        Context context = getApplicationContext();
-        CharSequence text = "Max 5 tickets per person!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        callToast();
 
         //Instance needed for spinner values
         Spinner adultSpinner = findViewById(R.id.spinner1);
@@ -184,6 +178,15 @@ public class MuseumActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    private void callToast(){
+        Context context = getApplicationContext();
+        CharSequence text = "Max 5 tickets per person!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 
 }
