@@ -35,9 +35,13 @@ public class MuseumActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
     }
 
+    int pos;
+
     private void switchMuseum(int position) {
         final TextView title = (TextView) findViewById(R.id.ticketTitle);
         final ImageView picture = (ImageView) findViewById(R.id.imageView);
+
+        pos = position;
 
         switch (position) {
             case 0:
@@ -66,6 +70,12 @@ public class MuseumActivity extends AppCompatActivity {
     public void open(View view) {
         Intent browserIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.metmuseum.org/"));
         startActivity(browserIntent);
+    }
+
+    public void onClick(View v){
+        if(pos == 0){
+
+        }
     }
 
 }
