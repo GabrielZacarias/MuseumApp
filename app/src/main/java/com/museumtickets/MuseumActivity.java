@@ -3,6 +3,7 @@ package com.museumtickets;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,8 +13,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MuseumActivity extends AppCompatActivity {
+
+    int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +27,16 @@ public class MuseumActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //String value = getIntent().getStringExtra("Position");
-        int position;
         int value = getIntent().getIntExtra("Position", 0);
 
         switchMuseum(value);
+
+        Context context = getApplicationContext();
+        CharSequence text = "Max 5 tickets per person!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
         //Instance needed for spinner values
         Spinner adultSpinner = findViewById(R.id.spinner1);
@@ -50,8 +59,6 @@ public class MuseumActivity extends AppCompatActivity {
         totalPrice.setKeyListener(null);
 
     }
-
-    int pos;
 
     private void switchMuseum(int position) {
         final TextView title = findViewById(R.id.ticketTitle);
@@ -154,24 +161,24 @@ public class MuseumActivity extends AppCompatActivity {
 
         switch(pos){
             case 0:
-                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceMMA)));
-                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxMMA)));
-                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalMMA)));
+                ticketPrice.setText("Ticket Price: $" + totalTicketPriceMMA);
+                salesTax.setText("Sales Tax: $" + totalSalesTaxMMA);
+                totalPrice.setText("Ticket Total: $" + ticketTotalMMA);
                 break;
             case 1:
-                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceMOMA)));
-                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxMOMA)));
-                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalMOMA)));
+                ticketPrice.setText("Ticket Price: $" + totalTicketPriceMOMA);
+                salesTax.setText("Sales Tax: $" + totalSalesTaxMOMA);
+                totalPrice.setText("Ticket Total: $" + ticketTotalMOMA);
                 break;
             case 2:
-                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceAMN)));
-                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxAMN)));
-                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalAMN)));
+                ticketPrice.setText("Ticket Price: $" + totalTicketPriceAMN);
+                salesTax.setText("Sales Tax: $" + totalSalesTaxAMN);
+                totalPrice.setText("Ticket Total: " + "$" + ticketTotalAMN);
                 break;
             case 3:
-                ticketPrice.setText((String.valueOf("Ticket Price: " + "$" + totalTicketPriceSGM)));
-                salesTax.setText((String.valueOf("Sales Tax: " + "$" + totalSalesTaxSGM)));
-                totalPrice.setText((String.valueOf("Ticket Total: " + "$" + ticketTotalSGM)));
+                ticketPrice.setText("Ticket Price: $" + totalTicketPriceSGM);
+                salesTax.setText("Sales Tax: $" + totalSalesTaxSGM);
+                totalPrice.setText("Ticket Total: $" + ticketTotalSGM);
                 break;
             default:
                 break;
