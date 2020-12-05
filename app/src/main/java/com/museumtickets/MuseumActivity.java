@@ -15,6 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+import java.util.Objects;
+
 public class MuseumActivity extends AppCompatActivity {
 
     int pos;
@@ -25,7 +28,7 @@ public class MuseumActivity extends AppCompatActivity {
         setContentView(R.layout.activity_museum);
         this.setTitle("Ticket Price Calculator");
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         int value = getIntent().getIntExtra("Position", 0);
         switchMuseum(value);
@@ -64,37 +67,38 @@ public class MuseumActivity extends AppCompatActivity {
 
         pos = position;
 
+        TextView textView = new TextView(this);
+
         switch (position) {
             case 0:
-                title.setText("The Metropolitan Museum of Art");
+                title.setText(getString(R.string.museum1));
                 picture.setImageResource(R.drawable.metropolitan);
-                adultText.setText("adult $25");
-                seniorText.setText("senior $17");
-                studentText.setText("student $12");
+                adultText.setText(String.format(Locale.ENGLISH,"%s %s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_ADULT)));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_SENIOR)));
+                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_STUDENT)));
                 break;
             case 1:
-                title.setText("The Museum of Modern Art");
+                title.setText(getString(R.string.museum2));
                 picture.setImageResource(R.drawable.modern_art);
-                adultText.setText("adult $25");
-                seniorText.setText("senior $18");
-                studentText.setText("student $14");
+                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_ADULT)));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_SENIOR)));
+                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_STUDENT)));
                 break;
             case 2:
-                title.setText("American Museum of Natural History");
+                title.setText(getString(R.string.museum3));
                 picture.setImageResource(R.drawable.american);
-                adultText.setText("adult $23");
-                seniorText.setText("senior $18");
-                studentText.setText("student $18");
+                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_ADULT)));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_SENIOR)));
+                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_STUDENT)));
                 break;
             case 3:
-                title.setText("Solomon R. Guggenheim Museum");
+                title.setText(getString(R.string.museum4));
                 picture.setImageResource(R.drawable.solomon);
-                adultText.setText("adult $25");
-                seniorText.setText("senior $18");
-                studentText.setText("student $18");
+                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_ADULT)));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_SENIOR)));
+                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_STUDENT)));
                 break;
             default:
-                title.setText("Incoming...");
                 break;
         }
     }
@@ -160,15 +164,15 @@ public class MuseumActivity extends AppCompatActivity {
         totalMuseumTax = (museumPrice * MagicNumbers.NYC_TAX);
         totalMuseumPrice = (museumPrice * MagicNumbers.NYC_TOTAL);
 
-        ticketPrice.setText(String.format("Ticket Price: $%.2f", museumPrice));
-        salesTax.setText(String.format("Sales Tax: $%.2f", totalMuseumTax));
-        totalPrice.setText(String.format("Ticket Total: $%.2f", totalMuseumPrice));
+        ticketPrice.setText(String.format(Locale.ENGLISH, "Ticket Price: $%.2f", museumPrice));
+        salesTax.setText(String.format(Locale.ENGLISH, "Sales Tax: $%.2f", totalMuseumTax));
+        totalPrice.setText(String.format(Locale.ENGLISH, "Ticket Total: $%.2f", totalMuseumPrice));
 
     }
 
     private void callToast(){
         Context context = getApplicationContext();
-        CharSequence text = "Max 5 tickets per category!";
+        CharSequence text = "Maximum of 5 tickets for each!";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
