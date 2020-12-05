@@ -26,7 +26,7 @@ public class MuseumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_museum);
-        this.setTitle("Ticket Price Calculator");
+        this.setTitle(getString(R.string.museumTitle));
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
@@ -47,9 +47,10 @@ public class MuseumActivity extends AppCompatActivity {
         seniorSpinner.setAdapter(adapter);
         studentSpinner.setAdapter(adapter);
 
-        final EditText ticketPrice = findViewById(R.id.editTextNumber);
-        final EditText salesTax = findViewById(R.id.editTextNumber2);
-        final EditText totalPrice = findViewById(R.id.editTextNumber3);
+
+        EditText ticketPrice = findViewById(R.id.editTextNumber);
+        EditText salesTax = findViewById(R.id.editTextNumber2);
+        EditText totalPrice = findViewById(R.id.editTextNumber3);
 
         ticketPrice.setKeyListener(null);
         salesTax.setKeyListener(null);
@@ -63,7 +64,6 @@ public class MuseumActivity extends AppCompatActivity {
         final TextView adultText = findViewById(R.id.adult);
         final TextView seniorText = findViewById(R.id.senior);
         final TextView studentText = findViewById(R.id.student);
-
 
         pos = position;
 
@@ -166,7 +166,6 @@ public class MuseumActivity extends AppCompatActivity {
         ticketPrice.setText(String.format(Locale.ENGLISH, "%s %.2f", getString(R.string.ticketPriceMsg), museumPrice));
         salesTax.setText(String.format(Locale.ENGLISH, "%s %.2f",getString(R.string.taxPriceMsg), totalMuseumTax));
         totalPrice.setText(String.format(Locale.ENGLISH, "%s %.2f", getString(R.string.totalPriceMsg), totalMuseumPrice));
-
     }
 
     private void callToast(){

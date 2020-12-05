@@ -1,17 +1,21 @@
 <resources>
     <string name="app_name">Museum Tickets</string>
     <string name="top_nyc_museums_to_visit">Top NYC Museums to visit</string>
-    <string name="string_my_activity_label">string/my_activity_label</string>
-    <string name="museum_selected_is">Museum selected is</string>
+    <string name="museumOneList">1. The Metropolitan Museum of Art</string>
+    <string name="museumTwoList">2. The Museum of Modern Art</string>
+    <string name="museumThreeList">3. American Museum of Natural History</string>
+    <string name="museumFourList">4. Solomon R. Guggenheim Museum</string>
 
-    <string name="adultPrice">adult $</string>
-    <string name="seniorPrice">senior $</string>
-    <string name="studentPrice">student $</string>
 
+    <string name="museumTitle">Ticket Price Calculator</string>
     <string name="museum1">The Metropolitan Museum of Art</string>
     <string name="museum2">The Museum of Modern Art</string>
     <string name="museum3">American Museum of Natural History</string>
     <string name="museum4">Solomon R. Guggenheim Museum</string>
+
+    <string name="adultPrice">adult $</string>
+    <string name="seniorPrice">senior $</string>
+    <string name="studentPrice">student $</string>
 
     <string name="ticketPriceMsg">Ticket Price: $</string>
     <string name="taxPriceMsg">Sales Tax: $</string>

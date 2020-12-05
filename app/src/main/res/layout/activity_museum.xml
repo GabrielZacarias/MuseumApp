@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:label="@string/string_my_activity_label"
     tools:context=".MuseumActivity">
 
     <TextView
@@ -13,7 +12,6 @@
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="@string/museum_selected_is"
         android:textColor="#009688"
         android:textSize="23sp"
         android:textStyle="bold"
@@ -116,8 +114,8 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
         android:onClick="onClick"
+        android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
@@ -129,6 +127,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/ticket_price"
         android:inputType="number"
@@ -137,13 +136,13 @@
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <EditText
         android:id="@+id/editTextNumber2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/sales_tax"
         android:inputType="number"
@@ -152,13 +151,13 @@
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.865"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.865" />
 
     <EditText
         android:id="@+id/editTextNumber3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/ticket_total"
         android:inputType="number"
@@ -167,8 +166,7 @@
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.931" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
