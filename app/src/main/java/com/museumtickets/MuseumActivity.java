@@ -127,7 +127,6 @@ public class MuseumActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-
         Spinner adultSpinner = findViewById(R.id.spinner1);
         Spinner seniorSpinner = findViewById(R.id.spinner2);
         Spinner studentSpinner = findViewById(R.id.spinner3);
@@ -164,15 +163,15 @@ public class MuseumActivity extends AppCompatActivity {
         totalMuseumTax = (museumPrice * MagicNumbers.NYC_TAX);
         totalMuseumPrice = (museumPrice * MagicNumbers.NYC_TOTAL);
 
-        ticketPrice.setText(String.format(Locale.ENGLISH, "Ticket Price: $%.2f", museumPrice));
-        salesTax.setText(String.format(Locale.ENGLISH, "Sales Tax: $%.2f", totalMuseumTax));
-        totalPrice.setText(String.format(Locale.ENGLISH, "Ticket Total: $%.2f", totalMuseumPrice));
+        ticketPrice.setText(String.format(Locale.ENGLISH, "%s %.2f", getString(R.string.ticketPriceMsg), museumPrice));
+        salesTax.setText(String.format(Locale.ENGLISH, "%s %.2f",getString(R.string.taxPriceMsg), totalMuseumTax));
+        totalPrice.setText(String.format(Locale.ENGLISH, "%s %.2f", getString(R.string.totalPriceMsg), totalMuseumPrice));
 
     }
 
     private void callToast(){
         Context context = getApplicationContext();
-        CharSequence text = "Maximum of 5 tickets for each!";
+        CharSequence text = getString(R.string.toaster);
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);

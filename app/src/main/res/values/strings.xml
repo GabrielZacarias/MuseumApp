@@ -13,6 +13,13 @@
     <string name="museum3">American Museum of Natural History</string>
     <string name="museum4">Solomon R. Guggenheim Museum</string>
 
+    <string name="ticketPriceMsg">Ticket Price: $</string>
+    <string name="taxPriceMsg">Sales Tax: $</string>
+    <string name="totalPriceMsg">Ticket Total: $</string>
+
+    <string name="toaster">Maximum of 5 tickets for each!</string>
+
+
     <string name="todo">TODO</string>
     <string name="button">Calculate Ticket Price</string>
     <string name="set_price" />
