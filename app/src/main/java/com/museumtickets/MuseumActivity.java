@@ -73,7 +73,7 @@ public class MuseumActivity extends AppCompatActivity {
             case 0:
                 title.setText(getString(R.string.museum1));
                 picture.setImageResource(R.drawable.metropolitan);
-                adultText.setText(String.format(Locale.ENGLISH,"%s %s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_ADULT)));
+                adultText.setText(String.format(Locale.ENGLISH,"%s %.0fs", getString(R.string.adultPrice),  MagicNumbers.MMA_ADULT));
                 seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_SENIOR)));
                 studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MMA_STUDENT)));
                 break;
