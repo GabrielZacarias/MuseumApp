@@ -80,23 +80,23 @@ public class MuseumActivity extends AppCompatActivity {
             case 1:
                 title.setText(getString(R.string.museum2));
                 picture.setImageResource(R.drawable.modern_art);
-                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_ADULT)));
-                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_SENIOR)));
-                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.MOMA_STUDENT)));
+                adultText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.adultPrice),  MagicNumbers.MOMA_ADULT));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.seniorPrice), MagicNumbers.MOMA_SENIOR));
+                studentText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.studentPrice), MagicNumbers.MOMA_STUDENT));
                 break;
             case 2:
                 title.setText(getString(R.string.museum3));
                 picture.setImageResource(R.drawable.american);
-                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_ADULT)));
-                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_SENIOR)));
-                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.AMN_STUDENT)));
+                adultText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.adultPrice),  MagicNumbers.AMN_ADULT));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.seniorPrice), MagicNumbers.AMN_SENIOR));
+                studentText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.studentPrice), MagicNumbers.AMN_STUDENT));
                 break;
             case 3:
                 title.setText(getString(R.string.museum4));
                 picture.setImageResource(R.drawable.solomon);
-                adultText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.adultPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_ADULT)));
-                seniorText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.seniorPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_SENIOR)));
-                studentText.setText(String.format(Locale.ENGLISH,"%s%s", getString(R.string.studentPrice), String.format(Locale.ENGLISH,"%.0f", MagicNumbers.SGM_STUDENT)));
+                adultText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.adultPrice),  MagicNumbers.SGM_ADULT));
+                seniorText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.seniorPrice), MagicNumbers.SGM_SENIOR));
+                studentText.setText(String.format(Locale.ENGLISH,"%s %.0f", getString(R.string.studentPrice), MagicNumbers.SGM_STUDENT));
                 break;
             default:
                 break;
