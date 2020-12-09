@@ -18,10 +18,17 @@ import android.widget.Toast;
 import java.util.Locale;
 import java.util.Objects;
 
+/**
+ * This class is essential to perform the methods used for the MuseumActivity.
+ * @author David Testa & Gabriel Marques-Zacarias
+ */
 public class MuseumActivity extends AppCompatActivity {
 
     int pos;
 
+    /**
+     * This method is essential as it is the first method called when the app begins.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +65,9 @@ public class MuseumActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method allows the different museums to switch between images as well as the text titles.
+     */
     private void switchMuseum(int position) {
         final TextView title = findViewById(R.id.ticketTitle);
         final ImageView picture = findViewById(R.id.imageView);
@@ -103,6 +113,9 @@ public class MuseumActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method is an action on selection of the image to open the appropriate URL for each museum.
+     */
     public void open(View view) {
         Intent browserIntent = null;
 
@@ -126,6 +139,9 @@ public class MuseumActivity extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
+    /**
+     * This method allows the user to calculate the costs of each ticket price for each museum.
+     */
     public void onClick(View view) {
         Spinner adultSpinner = findViewById(R.id.spinner1);
         Spinner seniorSpinner = findViewById(R.id.spinner2);
@@ -168,6 +184,9 @@ public class MuseumActivity extends AppCompatActivity {
         totalPrice.setText(String.format(Locale.ENGLISH, "%s %.2f", getString(R.string.totalPriceMsg), totalMuseumPrice));
     }
 
+    /**
+     * This method is required to display the toast message to the user on each second activity screen.
+     */
     private void callToast(){
         Context context = getApplicationContext();
         CharSequence text = getString(R.string.toaster);

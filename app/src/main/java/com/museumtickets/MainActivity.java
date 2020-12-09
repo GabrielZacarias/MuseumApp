@@ -11,10 +11,17 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * This class is essential to perform the main methods used for the MainActivity.
+ * @author David Testa & Gabriel Marques-Zacarias
+ */
 public class MainActivity extends AppCompatActivity {
 
     ListView listView;
 
+    /**
+     * This method is essential as it is the first method called when the app begins.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

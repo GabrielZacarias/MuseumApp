@@ -1,5 +1,9 @@
 package com.museumtickets;
 
+/**
+ * This class is used to ensure that no magic numbers float around the code.
+ * @author David Testa & Gabriel Marques-Zacarias
+ */
 public class MagicNumbers {
 
 
